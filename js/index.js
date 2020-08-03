@@ -1,13 +1,15 @@
-$(document).ready(function() {
-	$('.form').validate({
+jQuery(function() {
+		$('.form').validate({
 		rules: {
 			email: {
-				require: true,
+				required: true,
 				email: true
 			}
 		},
 		messages: {
-			email: 'Поля email обязательно для заполнения'
+			email: {
+				required: 'Поле обязательно для заполнения'
+			}
 		}
 	})
 })

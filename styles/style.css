@@ -101,7 +101,10 @@ body {
 	font-weight: medium;
 	font-size: 30px;
 }
-.cards__button {}
+.cards__button {
+	display: flex;
+	align-items: center;
+}
 .company {
 	display: flex;
 	flex-direction: column;

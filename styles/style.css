@@ -2,7 +2,7 @@ body {padding: 0;margin: 0;border: 0;}
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
 nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1.2;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
@@ -94,7 +94,6 @@ body {
 .cards__row {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	flex-wrap: wrap;
 	padding: 16px 0 10px 0;
 }
@@ -103,17 +102,20 @@ body {
 	font-size: 30px;
 }
 .cards__button {}
-.block {
+.company {
 	display: flex;
 	flex-direction: column;
 }
-.block:hover {
+.company:hover {
 	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
 }
-.block__row {
+.company__row {
 	display: flex;
 	flex-direction: column;
 	background: #ffffff;
+}
+.company__row:last-child {
+	flex-grow: 1;
 }
 .view {
 	position: relative;
@@ -143,14 +145,14 @@ body {
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.block__address {
+.company__address {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 
 	padding: 20px 23px 0 23px;
 }
-.block__address a {
+.company__address a {
 	display: block;
 	margin-right: 10px;
 
@@ -159,17 +161,18 @@ body {
 	text-align: left;
 	max-width: 265px;
 }
-.block__address img {
+.company__address img {
 	width: 24px;
 	height: 24px;
 }
-.block__price {
+.company__price {
 	display: flex;
 	align-items: center;
+	margin-top: auto;
 
 	padding: 13px 0 24px 23px;
 }
-.block__price span {}
+.company__price span {}
 .price {
 	padding: 10px 5px;
 	background: #fffbd7;
@@ -177,11 +180,11 @@ body {
 	color: #161617;
 	margin-right: 6px;
 }
-.block__price span:last-child {
+.company__price span:last-child {
 	font-size: 12px;
 	color: #80848d;
 }
-.block__text {
+.company__text {
 	max-width: 400px;
 }
 
@@ -212,7 +215,7 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap; 0;
 }
-.offers__row .block:first-child {
+.offers__row .company:first-child {
 	margin-right: 20px;
 }
 .offers__row:first-child {
@@ -309,12 +312,13 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-.footer__info span:first-child {
+.footer__info span {
 	font-size: 12px;
 	color: #80868e;
 	margin-bottom: 5px;
 }
-.footer__info span:last-child {
+.wezom {
 	font-weight: bold;
 	font-size: 15px;
+	color: #000000;
 }

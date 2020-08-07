@@ -1,5 +1,5 @@
 jQuery(function() {
-		$('.form').validate({
+	$('.form').validate({
 		rules: {
 			email: {
 				required: true,
@@ -11,5 +11,9 @@ jQuery(function() {
 				required: 'Поле обязательно для заполнения'
 			}
 		}
+	})
+
+	$('.burger').click( () => {
+		$('.header__menu').toggleClass('active')
 	})
 })

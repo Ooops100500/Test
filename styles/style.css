@@ -47,11 +47,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
 
 body {
+	background: #f1f1f1;
 	font-family: 'Gotham Pro';
 }
 
 .header {
 	max-width: 1900px;
+	background: #fff;
 }
 .header__body {
 	max-width: 1400px;
@@ -61,6 +63,9 @@ body {
 	justify-content: space-between;
 
 	padding: 10px 0;
+}
+.burger {
+	display: none;
 }
 .header__logo {
 	display: flex;
@@ -80,8 +85,10 @@ body {
 	text-transform: uppercase;
 	padding: 10px;
 }
-
 .content {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
 	background: #f1f1f1;
 }
 .content__body {
@@ -204,7 +211,7 @@ body {
 	width: 65%;
 }
 .box__colum:last-child {
-	justify-content: center;
+	justify-content: flex-start;
 	width: 35%;
 }
 .offers {
@@ -224,17 +231,16 @@ body {
 .offers__row:first-child {
 	margin-bottom: 30px;
 	align-items: center;
+	justify-content: space-between;
 }
 .offers__headline {
 	font-size: 30px;
 }
-.offers__button {}
-
 .subscribe{
 	max-width: 395px;
 	display: flex;
 	align-items: center;
-	margin-right: 100px;
+	padding-left: 110px;
 }
 .subscribe__block {
 	display: flex;
@@ -258,7 +264,6 @@ body {
 .subscribe__headline span {
 	color: #535455
 }
-.form {}
 .mail {
 	display: flex;
 	flex-direction: column;
@@ -280,8 +285,6 @@ body {
 .subscribe__button:active {
 	box-shadow: inset 0 3px rgba(127,24,24,1);
 }
-
-
 .footer {
 	max-width: 1400px;
 	margin: 0 auto;
@@ -290,6 +293,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 0 auto;
 	padding: 0 100px;
 	height: 95px;
 }
@@ -324,4 +328,479 @@ body {
 	font-weight: bold;
 	font-size: 15px;
 	color: #000000;
+}
+@media (max-width:1740px) {
+	.offers {
+		width: 940px;
+		padding: 48px 30px 50px 0;
+	}
+
+	.view__img {
+		max-width: 400px;
+	}
+
+	.offers__row {
+		justify-content: space-around;
+	}
+	.offers__row:first-child {
+		padding: 0 30px;
+	}
+	.company__text {
+		max-width: 354px;
+	}		
+}
+@media (max-width:1510px) {
+	.header__body{
+		max-width: 1200px;
+	}
+	.content__body{
+		max-width: 1200px;
+	}
+	.footer__body{
+		max-width: 1200px;
+	}
+	.company__address {
+		align-items: flex-start;
+		padding: 20px 10px 0 10px;
+	}
+	.company__address a {
+		max-width: 180px;
+	}
+	.company__text {
+		max-width: 290px;
+	}
+	.price {
+		font-size: 15px;
+	}
+	.company__price {
+		padding: 10px 0 24px 10px;
+	}
+	.view__img {
+		max-width: 290px;
+	}
+	.offers__img {
+		max-width: 320px;
+	}
+	.offers {
+		width: 820px;
+	}
+	.offers__row {
+		justify-content: space-around;
+	}
+	.offers__row:first-child{
+		padding: 0 40px;
+	}
+	.subscribe {
+		padding-left: 80px;
+	}
+}
+@media (max-width:1280px) {
+	.header__body{
+		max-width: 1024px;
+	}
+	.content__body{
+		max-width: 1024px;
+	}
+	.footer__body{
+		max-width: 1024px;
+	}
+
+	.box {
+		flex-direction: column;
+	}
+	.box__colum {}
+	.box__colum:first-child,
+	.box__colum:last-child {
+		justify-content: flex-start;
+		width: 100%;
+	}
+	.company__text {
+		font-size: 15px;
+		max-width: 400px;
+	}
+	.view__img {
+		max-width: 240px;
+	}
+	.offers__img {
+		max-width: 460px;
+	}
+	.offers,
+	.subscribe {
+		width: 1024px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.offers__row,
+	.offers__row:first-child {
+		justify-content: space-between;
+		padding: 30px 0;
+		margin-bottom: 0px;
+	}
+	.subscribe {
+		max-width: 1024px;
+		display: flex;
+		justify-content: center;
+	}
+	.subscribe__headline {
+		width: 100%;
+	}
+	.subscribe__button {
+		padding: 20px 156px;
+	}
+	.mail__call {
+		text-align: center;
+	}
+}
+@media (max-width:1070px) {
+	.header__body{
+		justify-content: space-around;
+		max-width: 768px;
+	}
+	.content__body{
+		max-width: 768px;
+	}
+	.footer__body{
+		max-width: 768px;
+	}
+	.button {
+		margin-left: 40px;
+	}
+	.menu__link {
+		padding: 0;
+	}
+	.cards {
+		margin-bottom: 40px;
+	}
+	.cards__row {
+		justify-content: center;
+	}
+	.cards__row:first-child {
+		justify-content: space-around;
+	}
+	.cards__row .company{
+		margin: 0 0 20px 20px;
+	}
+	.cards__headline h1 {
+		padding-left: 22px;
+	}
+	.company__text {
+		font-size: 15px;
+		max-width: 400px;
+	}
+	.view__img {
+		max-width: 310px;
+	}
+	.offers__img {
+		max-width: 460px;
+	}
+	.offers,
+	.subscribe {
+		width: 768px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.offers__row,
+	.offers__row:first-child {
+		justify-content: space-around;
+		padding: 30px 0;
+		margin-bottom: 0px;
+	}
+	.offers__row .company:first-child {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.subscribe {
+		max-width: 768px;
+		display: flex;
+		justify-content: center;
+	}
+	.subscribe__headline {
+		width: 100%;
+	}
+	.subscribe__button {
+		padding: 20px 156px;
+	}
+	.mail__call {
+		text-align: center;
+	}
+}
+@media (max-width:700px) {
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 3;
+		padding: 20px 0;
+	}
+	.header__body{
+		justify-content: space-between;
+		max-width: 480px;
+	}
+	.content {
+		padding-top: 80px;
+	}
+	.content__body{
+		max-width: 480px;
+	}
+	.footer__body{
+		max-width: 480px;
+		padding: 0 60px;
+	}
+	.burger {
+		display: block;
+		position: relative;
+		width: 40px;
+		height: 20px;
+		cursor: pointer;
+	}
+	.burger::before,
+	.burger::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		background-color: #000000;
+		right: : 0;
+		transition: all 0.8s ease 0s;
+	}
+	.burger::before {
+		top: 0;
+		height: 2px;
+	}
+	.burger::after {
+		bottom: 0;
+		height: 2px;
+	}
+	.burger span {
+		position: absolute;
+		left: 0;
+		top: 9px;
+		width: 100%;
+		height: 2px;
+		background-color: #000000;
+		transition: all 0.8s ease 0s;
+	}
+	.header__menu {
+		position: absolute;
+		right: -1000px;
+		background: #b7b7b7;
+		width: 100%;
+		height: 100%;
+		z-index: 2
+	}
+	.active {
+		position: fixed;
+		right: 0;
+		top: 60px;
+	}
+	.menu {
+		padding: 0;
+		margin: 0;
+		flex-direction: column;
+	}
+	.menu__item {
+		font-size: 20px;
+		padding: 0;
+	}
+	.menu__link {
+		display: block;
+		width: 100%;
+		padding: 20px 0;
+		border: 1px solid #3f3f3f;
+		text-align: center;
+	}
+	.button {
+		font-size: 12px;
+		margin-left: 40px;
+	}
+	.cards {
+		margin-bottom: 40px;
+	}
+	.cards__row {
+		justify-content: center;
+	}
+	.cards__row:first-child {
+		justify-content: space-around;
+	}
+	.cards__row .company{
+		margin: 0 0 20px 20px;
+	}
+	.cards__headline h1 {
+		padding-left: 22px;
+		font-size: 21px;
+	}
+	.price {
+		font-size: 12px;
+	}
+	.company__address {
+		align-items: center;
+	}
+	.company__address a {
+		max-width: 140px;
+	}
+	.company__text {
+		font-size: 15px;
+		max-width: 400px;
+	}
+	.view__img {
+		max-width: 220px;
+	}
+	.offers__img {
+		max-width: 460px;
+	}
+	.offers,
+	.subscribe {
+		width: 480px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.offers__row,
+	.offers__row:first-child {
+		justify-content: space-around;
+		padding: 30px 0;
+		margin-bottom: 0px;
+	}
+	.subscribe {
+		max-width: 480px;
+		display: flex;
+		justify-content: center;
+	}
+	.subscribe__headline {
+		width: 100%;
+	}
+	.subscribe__button {
+		padding: 20px 156px;
+	}
+	.mail__call {
+		text-align: center;
+	}
+}
+@media (max-width:530px) {
+	.header__body{
+		justify-content: space-around;
+		max-width: 300px;
+	}
+	.content {
+		padding-top: 80px;
+	}
+	.content__body{
+		max-width: 300px;
+	}
+	.footer__body{
+		max-width: 300px;
+		padding: 0;
+		margin: 0 auto;
+	}
+	.button {
+		font-size: 12px;
+		margin-left: 0;
+	}
+	.cards {
+		margin-bottom: 15px;
+	}
+	.cards__row {
+		justify-content: center;
+	}
+	.cards__row:first-child {
+		flex-direction: column;
+	}
+	.cards__row .company{
+		margin: 0 0 20px 0;
+	}
+	.cards__headline h1 {
+		display: flex;
+		justify-content: center;
+		padding-left: 0;
+		font-size: 21px;
+	}
+	.cards__button {
+		justify-content: center;
+	}
+	.price {
+		font-size: 16px;
+	}
+	.company__address {
+		align-items: center;
+	}
+	.company__address a {
+		max-width: 220px;
+		margin-right: 25px;
+	}
+	.company__price span:last-child {
+		font-size: 14px;
+	}
+	.company__text {
+		font-size: 15px;
+		max-width: 280px;
+	}
+	.view__img {
+		max-width: 300px;
+	}
+	.offers__img {
+		max-width: 300px;
+	}
+	.offers,
+	.subscribe {
+		width: 300px;
+		margin: 0 auto;
+		padding: 0;
+	}
+	.offers__row:first-child {
+		justify-content: center;
+		padding: 30px 0;
+		margin-bottom: 0px;
+	}
+	.offers__headline {
+		font-size: 25px;
+	}
+	.subscribe {
+		max-width: 300px;
+		display: flex;
+		justify-content: center;
+	}
+	.subscribe__row:first-child {
+		margin-bottom: 26px;
+		padding-top: 26px;
+	}
+	.subscribe__headline {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+	.mail__input {
+		text-align: center;
+		padding: 18px 0;
+	}
+	.subscribe__headline h1 {
+		text-align: center;
+		font-size: 20px;
+	}
+	.subscribe__headline span {
+		text-align: center;
+	}
+	.subscribe__button {
+		padding: 20px 80px;
+		margin-left: 16px;
+	}
+	.mail__call {
+		text-align: center;
+	}
+	.footer__developer {
+		align-items: flex-start;
+	}
+	.footer__icons img {
+		margin-right: 10px;
+	}
+	.footer__logo {
+		margin-right: 10px;
+		width: 25px;
+		height: 25px;
+	}
+	.footer__info {
+		padding-left: 5px;
+	}
+	.wezom {
+		font-size: 12px;
+	}
 }
